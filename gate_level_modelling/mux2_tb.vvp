@@ -1,0 +1,106 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002296e607f80 .scope module, "mux2_tb" "mux2_tb" 2 3;
+ .timescale -9 -9;
+v000002296e65ee30_0 .var "d0", 0 0;
+v000002296e65ef70_0 .var "d1", 0 0;
+v000002296e65e750_0 .var "s", 0 0;
+v000002296e65e930_0 .net "y", 0 0, L_000002296e6150a0;  1 drivers
+S_000002296e615f60 .scope module, "name" "m21" 2 6, 3 11 0, S_000002296e607f80;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "d0";
+    .port_info 1 /INPUT 1 "d1";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "y";
+v000002296e65e4d0_0 .net "d0", 0 0, v000002296e65ee30_0;  1 drivers
+v000002296e65e890_0 .net "d1", 0 0, v000002296e65ef70_0;  1 drivers
+v000002296e65ed90_0 .net "s", 0 0, v000002296e65e750_0;  1 drivers
+v000002296e65e7f0_0 .net "t1", 0 0, L_000002296e7cdf40;  1 drivers
+v000002296e65eb10_0 .net "t2", 0 0, L_000002296e6163c0;  1 drivers
+v000002296e65e570_0 .net "t3", 0 0, L_000002296e5e3120;  1 drivers
+v000002296e65e070_0 .net "y", 0 0, L_000002296e6150a0;  alias, 1 drivers
+S_000002296e6160f0 .scope module, "u1" "and_gate" 3 13, 3 1 0, S_000002296e615f60;
+ .timescale -9 -9;
+    .port_info 0 /OUTPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "c";
+L_000002296e7cdf40 .functor AND 1, v000002296e65ef70_0, v000002296e65e750_0, C4<1>, C4<1>;
+v000002296e5e3340_0 .net "a", 0 0, L_000002296e7cdf40;  alias, 1 drivers
+v000002296e616db0_0 .net "b", 0 0, v000002296e65ef70_0;  alias, 1 drivers
+v000002296e616280_0 .net "c", 0 0, v000002296e65e750_0;  alias, 1 drivers
+S_000002296e7cdae0 .scope module, "u2" "not_gate" 3 14, 3 7 0, S_000002296e615f60;
+ .timescale -9 -9;
+    .port_info 0 /OUTPUT 1 "d";
+    .port_info 1 /INPUT 1 "e";
+L_000002296e6163c0 .functor NOT 1, v000002296e65e750_0, C4<0>, C4<0>, C4<0>;
+v000002296e616320_0 .net "d", 0 0, L_000002296e6163c0;  alias, 1 drivers
+v000002296e7cdc70_0 .net "e", 0 0, v000002296e65e750_0;  alias, 1 drivers
+S_000002296e7cdd10 .scope module, "u3" "and_gate" 3 15, 3 1 0, S_000002296e615f60;
+ .timescale -9 -9;
+    .port_info 0 /OUTPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "c";
+L_000002296e5e3120 .functor AND 1, v000002296e65ee30_0, L_000002296e6163c0, C4<1>, C4<1>;
+v000002296e7cdea0_0 .net "a", 0 0, L_000002296e5e3120;  alias, 1 drivers
+v000002296e7cc290_0 .net "b", 0 0, v000002296e65ee30_0;  alias, 1 drivers
+v000002296e7cc330_0 .net "c", 0 0, L_000002296e6163c0;  alias, 1 drivers
+S_000002296e7cc3d0 .scope module, "u4" "or_gate" 3 16, 3 4 0, S_000002296e615f60;
+ .timescale -9 -9;
+    .port_info 0 /OUTPUT 1 "l";
+    .port_info 1 /INPUT 1 "m";
+    .port_info 2 /INPUT 1 "n";
+L_000002296e6150a0 .functor OR 1, L_000002296e7cdf40, L_000002296e5e3120, C4<0>, C4<0>;
+v000002296e7cc560_0 .net "l", 0 0, L_000002296e6150a0;  alias, 1 drivers
+v000002296e7cc600_0 .net "m", 0 0, L_000002296e7cdf40;  alias, 1 drivers
+v000002296e65e430_0 .net "n", 0 0, L_000002296e5e3120;  alias, 1 drivers
+    .scope S_000002296e607f80;
+T_0 ;
+    %vpi_call 2 8 "$dumpfile", "m21_tb.vcd" {0 0 0};
+    %vpi_call 2 9 "$dumpvars" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002296e65ee30_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002296e65ef70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002296e65e750_0, 0, 1;
+    %delay 100, 0;
+    %vpi_call 2 11 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_000002296e607f80;
+T_1 ;
+    %delay 40, 0;
+    %load/vec4 v000002296e65ee30_0;
+    %inv;
+    %store/vec4 v000002296e65ee30_0, 0, 1;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_000002296e607f80;
+T_2 ;
+    %delay 20, 0;
+    %load/vec4 v000002296e65ef70_0;
+    %inv;
+    %store/vec4 v000002296e65ef70_0, 0, 1;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_000002296e607f80;
+T_3 ;
+    %delay 10, 0;
+    %load/vec4 v000002296e65e750_0;
+    %inv;
+    %store/vec4 v000002296e65e750_0, 0, 1;
+    %jmp T_3;
+    .thread T_3;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "mux2_tb.v";
+    "./mux21.v";

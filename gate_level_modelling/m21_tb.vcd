@@ -1,0 +1,104 @@
+$date
+	Tue Jan 25 22:38:13 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module mux2_tb $end
+$var wire 1 ! y $end
+$var reg 1 " d0 $end
+$var reg 1 # d1 $end
+$var reg 1 $ s $end
+$scope module name $end
+$var wire 1 " d0 $end
+$var wire 1 # d1 $end
+$var wire 1 $ s $end
+$var wire 1 ! y $end
+$var wire 1 % t3 $end
+$var wire 1 & t2 $end
+$var wire 1 ' t1 $end
+$scope module u1 $end
+$var wire 1 ' a $end
+$var wire 1 # b $end
+$var wire 1 $ c $end
+$upscope $end
+$scope module u2 $end
+$var wire 1 & d $end
+$var wire 1 $ e $end
+$upscope $end
+$scope module u3 $end
+$var wire 1 % a $end
+$var wire 1 " b $end
+$var wire 1 & c $end
+$upscope $end
+$scope module u4 $end
+$var wire 1 ! l $end
+$var wire 1 ' m $end
+$var wire 1 % n $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0'
+1&
+0%
+0$
+0#
+0"
+0!
+$end
+#10
+0&
+1$
+#20
+1&
+0$
+1#
+#30
+1!
+1'
+0&
+1$
+#40
+1%
+1!
+1&
+0'
+0$
+0#
+1"
+#50
+0!
+0%
+0&
+1$
+#60
+1!
+1%
+1&
+0$
+1#
+#70
+0%
+1'
+0&
+1$
+#80
+0!
+1&
+0'
+0$
+0#
+0"
+#90
+0&
+1$
+#100
+1&
+0$
+1#
